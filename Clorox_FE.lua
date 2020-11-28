@@ -16,7 +16,6 @@ else
 end--Put The Hat Name Here if dont know it open dex and view the accessories of your character and search for it
 local hat = game:GetService("Workspace").MyNameIsEmma332:FindFirstChild(hatname)
 local hhandle = hat.Handle
-hat.Parent = workspace
 wait(1)
 
 Bypass = "death"
