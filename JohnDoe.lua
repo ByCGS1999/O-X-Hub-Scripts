@@ -26,11 +26,11 @@ end
 
 attacking = false
 
---chara["Left Arm"].BrickColor = BrickColor.new("Cool yellow")
---chara["Right Arm"].BrickColor = BrickColor.new("Cool yellow")
---chara["Left Leg"].BrickColor = BrickColor.new("Medium blue")
---chara["Right Leg"].BrickColor = BrickColor.new("Medium blue")
---chara.Torso.BrickColor = BrickColor.new("Bright yellow")
+chara["Left Arm"].BrickColor = BrickColor.new("Cool yellow")
+chara["Right Arm"].BrickColor = BrickColor.new("Cool yellow")
+chara["Left Leg"].BrickColor = BrickColor.new("Medium blue")
+chara["Right Leg"].BrickColor = BrickColor.new("Medium blue")
+chara.Torso.BrickColor = BrickColor.new("Bright yellow")
 
 --Outfit--
 New = function(Object, Parent, Name, Data)
