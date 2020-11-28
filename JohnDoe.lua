@@ -369,9 +369,15 @@ end
 
 --Death of a Mortal--
 function KillMortal(hitdude)
+    if hitdude:FindFirstChild("Torso") then
     bp.Position = hitdude.Torso.Position
     attacking = false
     SoulSteal(hitdude.Torso.Position)
+    elseif hitdude:FindFirstChild("UpperTorso") or hitdude:FindFirstChild("LowerTorso") then
+	bp.Position = hitdude.UpperTorso.Position
+    	attacking = false
+    	SoulSteal(hitdude.UpperTorso.Position)	
+    end
 end
 
 --Arm Touch--
