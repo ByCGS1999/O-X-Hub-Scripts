@@ -13,8 +13,8 @@ if ahat == true then
     hatname = _G.hat
 else
     hatname = "HotCocoaBottle_Red"
-end--Put The Hat Name Here if dont know it open dex and view the accessories of your character and search for it
-local hat = game:GetService("Workspace").MyNameIsEmma332:FindFirstChild(hatname)
+end
+local hat = char:FindFirstChild(hatname)
 local hhandle = hat.Handle
 wait(1)
 
