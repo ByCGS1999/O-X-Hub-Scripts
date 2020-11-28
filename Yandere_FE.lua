@@ -1,8 +1,10 @@
-if not _G.hat == nil then
-    ahat = true
-else
+if _G.hat == nil then
     ahat = false
+else
+    ahat = true
 end
+
+print(ahat)
 
 
 Bypass = "death"
@@ -643,10 +645,12 @@ w2.Part0 = hed
 w2.Parent = char
 w2.C0 = CFrame.new(0,-0.9,0)*CFrame.Angles(math.rad(0),math.pi/2,0)
     
+    local sw
+    
     if ahat == true then
-        local sw = ma[_G.hat].Handle
-    else
-        local sw = ma["Negative Katana"].Handle
+        sw = ma[_G.hat].Handle
+    elseif ahat == false then
+        sw = ma["Negative Katana"].Handle
     end
     sw.Orientation = Vector3.new(0,90,0)
     
@@ -1197,4 +1201,3 @@ end)
 
 wait(1)
 hum.Health = math.huge
-
