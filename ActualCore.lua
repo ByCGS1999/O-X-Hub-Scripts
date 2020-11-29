@@ -39,11 +39,14 @@ local HackerMan = Instance.new("TextButton")
 local HatInput = Instance.new("TextBox")
 local Hat = Instance.new("TextLabel")
 local SetHat = Instance.new("TextButton")
+local PlayerSettings = Instance.new("TextLabel")
+local FixLighting = Instance.new("TextButton")
+local BoostFPS = Instance.new("TextButton")
 
 --Properties:
 
 Gui.Name = "Gui"
-Gui.Parent = game.CoreGui
+Gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 Intro.Name = "Intro"
 Intro.Parent = Gui
@@ -350,7 +353,8 @@ Settings_2.BackgroundTransparency = 1.000
 Settings_2.BorderSizePixel = 0
 Settings_2.Position = UDim2.new(0, 0, 0.0905172378, 0)
 Settings_2.Size = UDim2.new(0, 188, 0, 211)
-Settings_2.CanvasPosition = Vector2.new(0, 150)
+Settings_2.CanvasPosition = Vector2.new(0, 335)
+Settings_2.CanvasSize = UDim2.new(0, 0, 3, 0)
 Settings_2.VerticalScrollBarInset = Enum.ScrollBarInset.Always
 
 SimLoop.Name = "SimLoop"
@@ -358,7 +362,7 @@ SimLoop.Parent = Settings_2
 SimLoop.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
 SimLoop.BorderColor3 = Color3.fromRGB(0, 0, 0)
 SimLoop.BorderSizePixel = 0
-SimLoop.Position = UDim2.new(0, 151, 0, 20)
+SimLoop.Position = UDim2.new(0, 154, 0, 7)
 SimLoop.Size = UDim2.new(0, 24, 0, 24)
 SimLoop.AutoButtonColor = false
 SimLoop.Selected = true
@@ -384,7 +388,7 @@ Themes.Name = "Themes"
 Themes.Parent = Settings_2
 Themes.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Themes.BackgroundTransparency = 1.000
-Themes.Position = UDim2.new(0.0038494356, 0, 0.124248207, 0)
+Themes.Position = UDim2.new(0.0038494356, 0, 0.0437884331, 0)
 Themes.Size = UDim2.new(0, 188, 0, 41)
 Themes.Font = Enum.Font.Ubuntu
 Themes.Text = "Themes"
@@ -397,7 +401,7 @@ Huzuni.Name = "Huzuni"
 Huzuni.Parent = Settings_2
 Huzuni.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Huzuni.BackgroundTransparency = 1.000
-Huzuni.Position = UDim2.new(-0.000339589082, 0, 0.211336106, 0)
+Huzuni.Position = UDim2.new(0.00497955969, 0, 0.109324612, 0)
 Huzuni.Size = UDim2.new(0, 188, 0, 37)
 Huzuni.Font = Enum.Font.Arcade
 Huzuni.Text = "Huzuni"
@@ -410,7 +414,7 @@ Default.Name = "Default"
 Default.Parent = Settings_2
 Default.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Default.BackgroundTransparency = 1.000
-Default.Position = UDim2.new(0.00497955969, 0, 0.291077465, 0)
+Default.Position = UDim2.new(0.00497955969, 0, 0.173261374, 0)
 Default.Size = UDim2.new(0, 188, 0, 37)
 Default.Font = Enum.Font.Arcade
 Default.Text = "Default"
@@ -423,7 +427,7 @@ HackerMan.Name = "HackerMan"
 HackerMan.Parent = Settings_2
 HackerMan.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 HackerMan.BackgroundTransparency = 1.000
-HackerMan.Position = UDim2.new(-0.000339589082, 0, 0.366508484, 0)
+HackerMan.Position = UDim2.new(0.00497955969, 0, 0.225703895, 0)
 HackerMan.Size = UDim2.new(0, 188, 0, 37)
 HackerMan.Font = Enum.Font.Arcade
 HackerMan.Text = "Hackerman"
@@ -436,7 +440,7 @@ HatInput.Name = "HatInput"
 HatInput.Parent = Settings_2
 HatInput.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
 HatInput.BorderSizePixel = 0
-HatInput.Position = UDim2.new(-0.00527726859, 0, 0.56561923, 0)
+HatInput.Position = UDim2.new(-0.00527726812, 0, 0.348665178, 0)
 HatInput.Size = UDim2.new(0, 188, 0, 26)
 HatInput.Font = Enum.Font.SourceSans
 HatInput.PlaceholderText = "Place Hat Name Here"
@@ -448,11 +452,12 @@ Hat.Name = "Hat"
 Hat.Parent = Settings_2
 Hat.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Hat.BackgroundTransparency = 1.000
-Hat.Position = UDim2.new(0.0038494356, 0, 0.479851663, 0)
+Hat.Position = UDim2.new(-0.00146971317, 0, 0.288759708, 0)
 Hat.Size = UDim2.new(0, 188, 0, 41)
 Hat.Font = Enum.Font.Ubuntu
 Hat.Text = "Hat Settings"
 Hat.TextColor3 = Color3.fromRGB(255, 255, 255)
+Hat.TextScaled = true
 Hat.TextSize = 20.000
 Hat.TextWrapped = true
 
@@ -460,7 +465,7 @@ SetHat.Name = "SetHat"
 SetHat.Parent = Settings_2
 SetHat.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 SetHat.BackgroundTransparency = 1.000
-SetHat.Position = UDim2.new(0.00466172257, 0, 0.617460072, 0)
+SetHat.Position = UDim2.new(-0.0112957247, 0, 0.400506049, 0)
 SetHat.Size = UDim2.new(0, 188, 0, 35)
 SetHat.Font = Enum.Font.Arcade
 SetHat.Text = "Set Hat"
@@ -469,9 +474,48 @@ SetHat.TextScaled = true
 SetHat.TextSize = 14.000
 SetHat.TextWrapped = true
 
+PlayerSettings.Name = "Player Settings"
+PlayerSettings.Parent = Settings_2
+PlayerSettings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayerSettings.BackgroundTransparency = 1.000
+PlayerSettings.Position = UDim2.new(-0.00146971317, 0, 0.458299935, 0)
+PlayerSettings.Size = UDim2.new(0, 188, 0, 41)
+PlayerSettings.Font = Enum.Font.Ubuntu
+PlayerSettings.Text = "Player Settings"
+PlayerSettings.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlayerSettings.TextScaled = true
+PlayerSettings.TextSize = 14.000
+PlayerSettings.TextWrapped = true
+
+FixLighting.Name = "FixLighting"
+FixLighting.Parent = Settings_2
+FixLighting.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FixLighting.BackgroundTransparency = 1.000
+FixLighting.Position = UDim2.new(-0.000339589082, 0, 0.508031487, 0)
+FixLighting.Size = UDim2.new(0, 188, 0, 37)
+FixLighting.Font = Enum.Font.Arcade
+FixLighting.Text = "Fix Lighting"
+FixLighting.TextColor3 = Color3.fromRGB(255, 255, 255)
+FixLighting.TextScaled = true
+FixLighting.TextSize = 14.000
+FixLighting.TextWrapped = true
+
+BoostFPS.Name = "BoostFPS"
+BoostFPS.Parent = Settings_2
+BoostFPS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BoostFPS.BackgroundTransparency = 1.000
+BoostFPS.Position = UDim2.new(0.00497955969, 0, 0.560473979, 0)
+BoostFPS.Size = UDim2.new(0, 188, 0, 37)
+BoostFPS.Font = Enum.Font.Arcade
+BoostFPS.Text = "Boost FPS"
+BoostFPS.TextColor3 = Color3.fromRGB(255, 255, 255)
+BoostFPS.TextScaled = true
+BoostFPS.TextSize = 14.000
+BoostFPS.TextWrapped = true
+
 -- Scripts:
 
-local function XLWG_fake_script() -- Close.LocalScript 
+local function OWYHJ_fake_script() -- Close.LocalScript 
 	local script = Instance.new('LocalScript', Close)
 
 	local ismini = false
@@ -479,8 +523,8 @@ local function XLWG_fake_script() -- Close.LocalScript
 		script.Parent.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(XLWG_fake_script)()
-local function JIIOJI_fake_script() -- YandereFE.LocalScript 
+coroutine.wrap(OWYHJ_fake_script)()
+local function DQRXQ_fake_script() -- YandereFE.LocalScript 
 	local script = Instance.new('LocalScript', YandereFE)
 
 	local HttpService = game:GetService("HttpService")
@@ -490,8 +534,8 @@ local function JIIOJI_fake_script() -- YandereFE.LocalScript
 		loadstring(Request)()
 	end)
 end
-coroutine.wrap(JIIOJI_fake_script)()
-local function SBMGOLD_fake_script() -- YandereCL.LocalScript 
+coroutine.wrap(DQRXQ_fake_script)()
+local function ZRAWFIU_fake_script() -- YandereCL.LocalScript 
 	local script = Instance.new('LocalScript', YandereCL)
 
 	local HttpService = game:GetService("HttpService")
@@ -501,8 +545,8 @@ local function SBMGOLD_fake_script() -- YandereCL.LocalScript
 		loadstring(Request)()
 	end)
 end
-coroutine.wrap(SBMGOLD_fake_script)()
-local function CFZOVHG_fake_script() -- ElioBlasioCL.LocalScript 
+coroutine.wrap(ZRAWFIU_fake_script)()
+local function YFLNVO_fake_script() -- ElioBlasioCL.LocalScript 
 	local script = Instance.new('LocalScript', ElioBlasioCL)
 
 	local HttpService = game:GetService("HttpService")
@@ -512,8 +556,8 @@ local function CFZOVHG_fake_script() -- ElioBlasioCL.LocalScript
 		loadstring(Request)()
 	end)
 end
-coroutine.wrap(CFZOVHG_fake_script)()
-local function UTTWUD_fake_script() -- ElioBlasioFE.LocalScript 
+coroutine.wrap(YFLNVO_fake_script)()
+local function JOMN_fake_script() -- ElioBlasioFE.LocalScript 
 	local script = Instance.new('LocalScript', ElioBlasioFE)
 
 	local HttpService = game:GetService("HttpService")
@@ -523,8 +567,8 @@ local function UTTWUD_fake_script() -- ElioBlasioFE.LocalScript
 		loadstring(Request)()
 	end)
 end
-coroutine.wrap(UTTWUD_fake_script)()
-local function UJJUNL_fake_script() -- JohnDoe.LocalScript 
+coroutine.wrap(JOMN_fake_script)()
+local function HZBHX_fake_script() -- JohnDoe.LocalScript 
 	local script = Instance.new('LocalScript', JohnDoe)
 
 	local HttpService = game:GetService("HttpService")
@@ -534,8 +578,8 @@ local function UJJUNL_fake_script() -- JohnDoe.LocalScript
 		loadstring(Request)()
 	end)
 end
-coroutine.wrap(UJJUNL_fake_script)()
-local function JNJMK_fake_script() -- CloroxCL.LocalScript 
+coroutine.wrap(HZBHX_fake_script)()
+local function SDEPXX_fake_script() -- CloroxCL.LocalScript 
 	local script = Instance.new('LocalScript', CloroxCL)
 
 	local HttpService = game:GetService("HttpService")
@@ -545,8 +589,8 @@ local function JNJMK_fake_script() -- CloroxCL.LocalScript
 		loadstring(Request)()
 	end)
 end
-coroutine.wrap(JNJMK_fake_script)()
-local function GNVCZC_fake_script() -- CloroxFE.LocalScript 
+coroutine.wrap(SDEPXX_fake_script)()
+local function YSYW_fake_script() -- CloroxFE.LocalScript 
 	local script = Instance.new('LocalScript', CloroxFE)
 
 	local HttpService = game:GetService("HttpService")
@@ -556,16 +600,16 @@ local function GNVCZC_fake_script() -- CloroxFE.LocalScript
 		loadstring(Request)()
 	end)
 end
-coroutine.wrap(GNVCZC_fake_script)()
-local function IVFSXND_fake_script() -- Close_2.LocalScript 
+coroutine.wrap(YSYW_fake_script)()
+local function EPKWVLF_fake_script() -- Close_2.LocalScript 
 	local script = Instance.new('LocalScript', Close_2)
 
 	script.Parent.MouseButton1Down:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(IVFSXND_fake_script)()
-local function FVEBRH_fake_script() -- SimLoop.LocalScript 
+coroutine.wrap(EPKWVLF_fake_script)()
+local function YAXBDR_fake_script() -- SimLoop.LocalScript 
 	local script = Instance.new('LocalScript', SimLoop)
 
 	checked = false
@@ -588,8 +632,8 @@ local function FVEBRH_fake_script() -- SimLoop.LocalScript
 	end
 	
 end
-coroutine.wrap(FVEBRH_fake_script)()
-local function NPLRSP_fake_script() -- Settings_2.LocalScript 
+coroutine.wrap(YAXBDR_fake_script)()
+local function LGAXRM_fake_script() -- Settings_2.LocalScript 
 	local script = Instance.new('LocalScript', Settings_2)
 
 	local RunService = game:GetService("RunService")
@@ -639,9 +683,49 @@ local function NPLRSP_fake_script() -- Settings_2.LocalScript
 	script.Parent.HackerMan.MouseButton1Down:Connect(function()
 		HackerMan()
 	end)
+	
+	origsettings = {abt = game:GetService("Lighting").Ambient, oabt = game:GetService("Lighting").OutdoorAmbient, brt = game:GetService("Lighting").Brightness, time = game:GetService("Lighting").ClockTime, fe = game:GetService("Lighting").FogEnd, fs = game:GetService("Lighting").FogStart, gs = game:GetService("Lighting").GlobalShadows}
+	
+	script.Parent.FixLighting.MouseButton1Down:Connect(function()
+		game:GetService("Lighting").Ambient = origsettings.abt
+		game:GetService("Lighting").OutdoorAmbient = origsettings.oabt
+		game:GetService("Lighting").Brightness = origsettings.brt
+		game:GetService("Lighting").ClockTime = origsettings.time
+		game:GetService("Lighting").FogEnd = origsettings.fe
+		game:GetService("Lighting").FogStart = origsettings.fs
+		game:GetService("Lighting").GlobalShadows = origsettings.gs
+	end)
+	
+	script.Parent.BoostFPS.MouseButton1Down:Connect(function()
+		workspace:FindFirstChildOfClass('Terrain').WaterWaveSize = 0
+		workspace:FindFirstChildOfClass('Terrain').WaterWaveSpeed = 0
+		workspace:FindFirstChildOfClass('Terrain').WaterReflectance = 0
+		workspace:FindFirstChildOfClass('Terrain').WaterTransparency = 0
+		game:GetService("Lighting").GlobalShadows = false
+		game:GetService("Lighting").FogEnd = 9e9
+		settings().Rendering.QualityLevel = 1
+		for i,v in pairs(game:GetDescendants()) do
+			if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+				v.Material = "Plastic"
+				v.Reflectance = 0
+			elseif v:IsA("Decal") then
+				v.Transparency = 1
+			elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+				v.Lifetime = NumberRange.new(0)
+			elseif v:IsA("Explosion") then
+				v.BlastPressure = 1
+				v.BlastRadius = 1
+			end
+		end
+		for i,v in pairs(game:GetService("Lighting"):GetDescendants()) do
+			if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+				v.Enabled = false
+			end
+		end
+	end)
 end
-coroutine.wrap(NPLRSP_fake_script)()
-local function OVEJ_fake_script() -- SetHat.LocalScript 
+coroutine.wrap(LGAXRM_fake_script)()
+local function JRUA_fake_script() -- SetHat.LocalScript 
 	local script = Instance.new('LocalScript', SetHat)
 
 	_G.hat = nil
@@ -654,8 +738,8 @@ local function OVEJ_fake_script() -- SetHat.LocalScript
 		script.Parent.Text = "Set Hat"
 	end)
 end
-coroutine.wrap(OVEJ_fake_script)()
-local function BUST_fake_script() -- Gui.Whitelist 
+coroutine.wrap(JRUA_fake_script)()
+local function FCXVY_fake_script() -- Gui.Whitelist 
 	local script = Instance.new('LocalScript', Gui)
 
 	local plr = game.Players.LocalPlayer
@@ -707,8 +791,8 @@ local function BUST_fake_script() -- Gui.Whitelist
 	end
 	
 end
-coroutine.wrap(BUST_fake_script)()
-local function XEUCC_fake_script() -- Gui.Core 
+coroutine.wrap(FCXVY_fake_script)()
+local function XBTHYOJ_fake_script() -- Gui.Core 
 	local script = Instance.new('LocalScript', Gui)
 
 	local plr = game.Players.LocalPlayer
@@ -728,14 +812,18 @@ local function XEUCC_fake_script() -- Gui.Core
 		end
 	end)
 end
-coroutine.wrap(XEUCC_fake_script)()
-local function subrutine256()
-    local script = Instance.new('LocalScript', Gui)
-    
-    Box.Draggable = true
-    Box.Active = true
-    Box.Selectable = true
-    Settings.Draggable = true
-    Settings.Active = true
-    Settings.Selectable = true
+coroutine.wrap(XBTHYOJ_fake_script)()
+local function VVKDD_fake_script() -- Gui.Draggable 
+	local script = Instance.new('LocalScript', Gui)
+
+	local box = script.Parent.Box
+	local Settings = script.Parent.Settings
+	
+	box.Active = true
+	box.Selectable = true
+	box.Draggable = true
+	Settings.Active = true
+	Settings.Selectable = true
+	Settings.Draggable = true
 end
+coroutine.wrap(VVKDD_fake_script)()
