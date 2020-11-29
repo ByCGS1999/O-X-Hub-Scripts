@@ -46,7 +46,7 @@ local BoostFPS = Instance.new("TextButton")
 --Properties:
 
 Gui.Name = "Gui"
-Gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Gui.Parent = game.CoreGui
 
 Intro.Name = "Intro"
 Intro.Parent = Gui
