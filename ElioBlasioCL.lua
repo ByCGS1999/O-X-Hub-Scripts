@@ -1245,6 +1245,9 @@ coroutine.wrap(
             end
             if not hrp then
                 local hrp = realchar.HumanoidRootPart
+                local hrp2 = hrp:Clone()
+
+                hrp2.Parent = realchar
                 hrp.Name = "hi"
                 hrp.Transparency = 0
                 hrp.Anchored = false
@@ -1255,6 +1258,16 @@ coroutine.wrap(
                 if hrp:FindFirstChildOfClass("AlignOrientation") then
                     hrp:FindFirstChildOfClass("AlignOrientation"):Destroy()
                 end
+
+                local bp = Instance.new("BodyPosition", hrp)
+                bp.Position = hrp.Position
+                bp.D = 9999999
+                bp.P = 999999999999999
+                bp.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+                flinger = Instance.new("BodyAngularVelocity", hrp)
+                flinger.MaxTorque = Vector3.new(math.huge, math.huge, math.huge)
+                flinger.P = 1000000000000000000000000000
+                flinger.AngularVelocity = Vector3.new(10000, 10000, 10000)
             end
         end
     end
