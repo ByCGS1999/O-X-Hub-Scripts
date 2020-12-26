@@ -108,8 +108,8 @@ mouse.Button1Down:connect(
             until shooting == true
 
             repeat
-                wait()
                 bp.Position = mouse.Hit.p
+                wait()
             until shooting == false
         elseif FireMode == "Semi" then
             shooting = true
