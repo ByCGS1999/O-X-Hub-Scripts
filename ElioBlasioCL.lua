@@ -1243,7 +1243,7 @@ coroutine.wrap(
                 HumanoidIsDead = true
                 break
             end
-            if not hrp then
+            if not hrp or hrp == nil then
                 local hrp = realchar.HumanoidRootPart
                 local hrp2 = hrp:Clone()
 
