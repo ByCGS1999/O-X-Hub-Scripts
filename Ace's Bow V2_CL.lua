@@ -103,16 +103,15 @@ end
 
 spawn(function()
 	while wait() do
-	    if attack == false then
-		    bp.Position = PlayerCharacter.Torso.Position
-		else
-		    if not bp or bp == nil then
-		        hrp,bp = MakeSpinnyPart();
-		    end
-		end
+	    if bp and hrp then
+	        if attack == false then
+		        bp.Position = PlayerCharacter.Torso.Position
+	        end
+	    else
+	         hrp,bp = MakeSpinnyPart();
+        end
 	end
 end)
-
 
 ArtificialHB = Instance.new("BindableEvent", script)
 ArtificialHB.Name = "Heartbeat"
