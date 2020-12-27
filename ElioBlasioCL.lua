@@ -8,36 +8,40 @@ print("Controls: V: Change FireMode Click: Shoot")
 FireMode = "Auto" -- Semi || Shot per Shot. Auto || Auto Spread //BUGGY
 Bypass = "death"
 loadstring(game:GetObjects("rbxassetid://5564647609")[1].Source)()
-
+local hrp,bp
 wait(1)
 local Player = game.Players.LocalPlayer
 local realchar = Player.Character
 local fchar = workspace.non
 
-local hrp = realchar.HumanoidRootPart
+function MakeSpinnyPart()
+   local hrp = PlayerCharacter.HumanoidRootPart
 local hrp2 = hrp:Clone()
 
-hrp2.Parent = realchar
-hrp.Name = "hi"
+hrp2.Parent = PlayerCharacter
+hrp.Name = "HRPLOLZ"
 hrp.Transparency = 0
 hrp.Anchored = false
-
 if hrp:FindFirstChildOfClass("AlignPosition") then
-    hrp:FindFirstChildOfClass("AlignPosition"):Destroy()
+	hrp:FindFirstChildOfClass("AlignPosition"):Destroy()
 end
 if hrp:FindFirstChildOfClass("AlignOrientation") then
-    hrp:FindFirstChildOfClass("AlignOrientation"):Destroy()
+	hrp:FindFirstChildOfClass("AlignOrientation"):Destroy()
 end
 
 local bp = Instance.new("BodyPosition", hrp)
 bp.Position = hrp.Position
 bp.D = 9999999
 bp.P = 999999999999999
-bp.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
-flinger = Instance.new("BodyAngularVelocity", hrp)
-flinger.MaxTorque = Vector3.new(math.huge, math.huge, math.huge)
+bp.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+flinger = Instance.new("BodyAngularVelocity",hrp)
+flinger.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
 flinger.P = 1000000000000000000000000000
-flinger.AngularVelocity = Vector3.new(10000, 10000, 10000)
+flinger.AngularVelocity = Vector3.new(10000,10000,10000) 
+return hrp,bp
+end
+hrp,bp = MakeSpinnyPart();
+
 
 --bhandle.CanCollide = false
 
@@ -134,7 +138,9 @@ spawn(
             if shooting == false then
                 bp.Position = realchar.Torso.Position
             else
-                wait()
+                if not bp or bp == nil then
+                   hrp,bp = MakeSpinnyPart(); 
+                end
             end
         end
     end
@@ -331,17 +337,19 @@ function SOUND(PARENT, ID, VOL, LOOP, REMOVE)
     so:Play()
     removeuseless:AddItem(so, REMOVE)
 end
-
-mouse.KeyDown:connect(
-    function(Press)
-        Press = Press:lower()
+mouse.KeyDown:Connect(function(Press) 
+        Press = Press:lower() 
         if Press == "v" then
             if FireMode == "Auto" then
                 FireMode = "Semi"
-            elseif FireMode == "Semi" then
-                FireMode = "Auto"
-            end
+         elseif FireMode == "Semi" then
+              FireMode = "Auto"
         end
+    end
+end)
+mouse.KeyDown:connect(
+    function(Press)
+        Press = Press:lower()
         if Press == "t" then
             if tauntdebounce then
                 return
