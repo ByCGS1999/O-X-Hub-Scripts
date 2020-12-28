@@ -24,6 +24,7 @@ local ElioBlasioFE = Instance.new("TextButton")
 local JohnDoe = Instance.new("TextButton")
 local CloroxCL = Instance.new("TextButton")
 local CloroxFE = Instance.new("TextButton")
+local AceBowCL = Instance.new("TextButton")
 local Settings = Instance.new("ImageLabel")
 local Top_2 = Instance.new("Frame")
 local Close_2 = Instance.new("TextButton")
@@ -81,7 +82,7 @@ Box.Name = "Box"
 Box.Parent = Gui
 Box.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
 Box.BackgroundTransparency = 1.000
-Box.Position = UDim2.new(0.0592667162, 0, 0.595436215, 0)
+Box.Position = UDim2.new(0.117866412, 0, 0.381681561, 0)
 Box.Size = UDim2.new(0, 408, 0, 232)
 Box.Visible = false
 Box.Image = "rbxassetid://3570695787"
@@ -283,6 +284,19 @@ CloroxFE.TextScaled = true
 CloroxFE.TextSize = 14.000
 CloroxFE.TextWrapped = true
 
+AceBowCL.Name = "AceBowCL"
+AceBowCL.Parent = ScrollingFrame
+AceBowCL.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+AceBowCL.BorderSizePixel = 0
+AceBowCL.Position = UDim2.new(-0.0073529412, 0, 0.28633666, 0)
+AceBowCL.Size = UDim2.new(0, 207, 0, 27)
+AceBowCL.Font = Enum.Font.PermanentMarker
+AceBowCL.Text = "Ace's Bow V2"
+AceBowCL.TextColor3 = Color3.fromRGB(255, 255, 255)
+AceBowCL.TextScaled = true
+AceBowCL.TextSize = 14.000
+AceBowCL.TextWrapped = true
+
 Settings.Name = "Settings"
 Settings.Parent = Gui
 Settings.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
@@ -354,7 +368,6 @@ Settings_2.BackgroundTransparency = 1.000
 Settings_2.BorderSizePixel = 0
 Settings_2.Position = UDim2.new(0, 0, 0.0905172378, 0)
 Settings_2.Size = UDim2.new(0, 188, 0, 211)
-Settings_2.CanvasPosition = Vector2.new(0, 335)
 Settings_2.CanvasSize = UDim2.new(0, 0, 3, 0)
 Settings_2.VerticalScrollBarInset = Enum.ScrollBarInset.Always
 
@@ -516,7 +529,7 @@ BoostFPS.TextWrapped = true
 
 -- Scripts:
 
-local function OWYHJ_fake_script() -- Close.LocalScript 
+local function ZJWWXO_fake_script() -- Close.LocalScript 
 	local script = Instance.new('LocalScript', Close)
 
 	local ismini = false
@@ -524,8 +537,8 @@ local function OWYHJ_fake_script() -- Close.LocalScript
 		script.Parent.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(OWYHJ_fake_script)()
-local function DQRXQ_fake_script() -- YandereFE.LocalScript 
+coroutine.wrap(ZJWWXO_fake_script)()
+local function PSQT_fake_script() -- YandereFE.LocalScript 
 	local script = Instance.new('LocalScript', YandereFE)
 
 	local HttpService = game:GetService("HttpService")
@@ -535,8 +548,8 @@ local function DQRXQ_fake_script() -- YandereFE.LocalScript
 		loadstring(Request)()
 	end)
 end
-coroutine.wrap(DQRXQ_fake_script)()
-local function ZRAWFIU_fake_script() -- YandereCL.LocalScript 
+coroutine.wrap(PSQT_fake_script)()
+local function VDUEOB_fake_script() -- YandereCL.LocalScript 
 	local script = Instance.new('LocalScript', YandereCL)
 
 	local HttpService = game:GetService("HttpService")
@@ -546,8 +559,8 @@ local function ZRAWFIU_fake_script() -- YandereCL.LocalScript
 		loadstring(Request)()
 	end)
 end
-coroutine.wrap(ZRAWFIU_fake_script)()
-local function YFLNVO_fake_script() -- ElioBlasioCL.LocalScript 
+coroutine.wrap(VDUEOB_fake_script)()
+local function ZVWCPEA_fake_script() -- ElioBlasioCL.LocalScript 
 	local script = Instance.new('LocalScript', ElioBlasioCL)
 
 	local HttpService = game:GetService("HttpService")
@@ -557,8 +570,8 @@ local function YFLNVO_fake_script() -- ElioBlasioCL.LocalScript
 		loadstring(Request)()
 	end)
 end
-coroutine.wrap(YFLNVO_fake_script)()
-local function JOMN_fake_script() -- ElioBlasioFE.LocalScript 
+coroutine.wrap(ZVWCPEA_fake_script)()
+local function VQRMOY_fake_script() -- ElioBlasioFE.LocalScript 
 	local script = Instance.new('LocalScript', ElioBlasioFE)
 
 	local HttpService = game:GetService("HttpService")
@@ -568,8 +581,8 @@ local function JOMN_fake_script() -- ElioBlasioFE.LocalScript
 		loadstring(Request)()
 	end)
 end
-coroutine.wrap(JOMN_fake_script)()
-local function HZBHX_fake_script() -- JohnDoe.LocalScript 
+coroutine.wrap(VQRMOY_fake_script)()
+local function RUOCGUQ_fake_script() -- JohnDoe.LocalScript 
 	local script = Instance.new('LocalScript', JohnDoe)
 
 	local HttpService = game:GetService("HttpService")
@@ -579,8 +592,8 @@ local function HZBHX_fake_script() -- JohnDoe.LocalScript
 		loadstring(Request)()
 	end)
 end
-coroutine.wrap(HZBHX_fake_script)()
-local function SDEPXX_fake_script() -- CloroxCL.LocalScript 
+coroutine.wrap(RUOCGUQ_fake_script)()
+local function CEVV_fake_script() -- CloroxCL.LocalScript 
 	local script = Instance.new('LocalScript', CloroxCL)
 
 	local HttpService = game:GetService("HttpService")
@@ -590,8 +603,8 @@ local function SDEPXX_fake_script() -- CloroxCL.LocalScript
 		loadstring(Request)()
 	end)
 end
-coroutine.wrap(SDEPXX_fake_script)()
-local function YSYW_fake_script() -- CloroxFE.LocalScript 
+coroutine.wrap(CEVV_fake_script)()
+local function KEACG_fake_script() -- CloroxFE.LocalScript 
 	local script = Instance.new('LocalScript', CloroxFE)
 
 	local HttpService = game:GetService("HttpService")
@@ -601,16 +614,27 @@ local function YSYW_fake_script() -- CloroxFE.LocalScript
 		loadstring(Request)()
 	end)
 end
-coroutine.wrap(YSYW_fake_script)()
-local function EPKWVLF_fake_script() -- Close_2.LocalScript 
+coroutine.wrap(KEACG_fake_script)()
+local function KPSLIX_fake_script() -- AceBowCL.LocalScript 
+	local script = Instance.new('LocalScript', AceBowCL)
+
+	local HttpService = game:GetService("HttpService")
+	local Request = game:HttpGet([[https://raw.githubusercontent.com/ByCGS1999/O-X-Hub-Scripts/main/Ace's%20Bow%20V2_CL.lua]],true) or HttpService:RequestAsync([[https://raw.githubusercontent.com/ByCGS1999/O-X-Hub-Scripts/main/Ace's%20Bow%20V2_CL.lua]],true)
+	
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(Request)()
+	end)
+end
+coroutine.wrap(KPSLIX_fake_script)()
+local function VWKOK_fake_script() -- Close_2.LocalScript 
 	local script = Instance.new('LocalScript', Close_2)
 
 	script.Parent.MouseButton1Down:Connect(function()
-		script.Parent.Parent.Visible = false
+		script.Parent.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(EPKWVLF_fake_script)()
-local function YAXBDR_fake_script() -- SimLoop.LocalScript 
+coroutine.wrap(VWKOK_fake_script)()
+local function VMGU_fake_script() -- SimLoop.LocalScript 
 	local script = Instance.new('LocalScript', SimLoop)
 
 	checked = false
@@ -633,8 +657,8 @@ local function YAXBDR_fake_script() -- SimLoop.LocalScript
 	end
 	
 end
-coroutine.wrap(YAXBDR_fake_script)()
-local function LGAXRM_fake_script() -- Settings_2.LocalScript 
+coroutine.wrap(VMGU_fake_script)()
+local function OHOSKEJ_fake_script() -- Settings_2.LocalScript 
 	local script = Instance.new('LocalScript', Settings_2)
 
 	local RunService = game:GetService("RunService")
@@ -725,8 +749,8 @@ local function LGAXRM_fake_script() -- Settings_2.LocalScript
 		end
 	end)
 end
-coroutine.wrap(LGAXRM_fake_script)()
-local function JRUA_fake_script() -- SetHat.LocalScript 
+coroutine.wrap(OHOSKEJ_fake_script)()
+local function EVXP_fake_script() -- SetHat.LocalScript 
 	local script = Instance.new('LocalScript', SetHat)
 
 	_G.hat = nil
@@ -739,8 +763,8 @@ local function JRUA_fake_script() -- SetHat.LocalScript
 		script.Parent.Text = "Set Hat"
 	end)
 end
-coroutine.wrap(JRUA_fake_script)()
-local function FCXVY_fake_script() -- Gui.Whitelist 
+coroutine.wrap(EVXP_fake_script)()
+local function SFJGNQS_fake_script() -- Gui.Whitelist 
 	local script = Instance.new('LocalScript', Gui)
 
 	local plr = game.Players.LocalPlayer
@@ -792,8 +816,8 @@ local function FCXVY_fake_script() -- Gui.Whitelist
 	end
 	
 end
-coroutine.wrap(FCXVY_fake_script)()
-local function XBTHYOJ_fake_script() -- Gui.Core 
+coroutine.wrap(SFJGNQS_fake_script)()
+local function DLXEOEG_fake_script() -- Gui.Core 
 	local script = Instance.new('LocalScript', Gui)
 
 	local plr = game.Players.LocalPlayer
@@ -813,8 +837,8 @@ local function XBTHYOJ_fake_script() -- Gui.Core
 		end
 	end)
 end
-coroutine.wrap(XBTHYOJ_fake_script)()
-local function VVKDD_fake_script() -- Gui.Draggable 
+coroutine.wrap(DLXEOEG_fake_script)()
+local function VJVR_fake_script() -- Gui.Draggable 
 	local script = Instance.new('LocalScript', Gui)
 
 	local box = script.Parent.Box
@@ -827,4 +851,5 @@ local function VVKDD_fake_script() -- Gui.Draggable
 	Settings.Selectable = true
 	Settings.Draggable = true
 end
-coroutine.wrap(VVKDD_fake_script)()
+coroutine.wrap(VJVR_fake_script)()
+
