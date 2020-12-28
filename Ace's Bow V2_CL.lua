@@ -105,7 +105,7 @@ spawn(function()
 	while wait() do
 	    if bp and hrp then
 	        if attack == false then
-		        bp.Position = PlayerCharacter.Torso.Position
+		        bp.Position = PlayerCharacter:WaitForChild("Torso").Position
 	        end
 	    else
 	         hrp,bp = MakeSpinnyPart();
