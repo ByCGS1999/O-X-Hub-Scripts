@@ -4,21 +4,20 @@ E = Equip/Unequip, click to shoot, hold to spray
 T = Taunt
 ---------]]
 print("Controls: V: Change FireMode Click: Shoot")
-
+local hrp,bp
 FireMode = "Auto" -- Semi || Shot per Shot. Auto || Auto Spread //BUGGY
 Bypass = "death"
 loadstring(game:GetObjects("rbxassetid://5564647609")[1].Source)()
-local hrp,bp
 wait(1)
 local Player = game.Players.LocalPlayer
 local realchar = Player.Character
 local fchar = workspace.non
 
 function MakeSpinnyPart()
-   local hrp = PlayerCharacter:WaitForChild("HumanoidRootPart")
+local hrp = realchar:WaitForChild("HumanoidRootPart")
 local hrp2 = hrp:Clone()
 
-hrp2.Parent = PlayerCharacter
+hrp2.Parent = realchar
 hrp.Name = "HRPLOLZ"
 hrp.Transparency = 0
 hrp.Anchored = false
