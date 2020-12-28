@@ -105,9 +105,9 @@ spawn(
     function()
         while wait() do
             if attack == false then
-		if Humanoid.RigType == Enum.HumanoidRigType.R6 then
+		if realchar.Humanoid.RigType == Enum.HumanoidRigType.R6 then
                 	bp.Position = realchar.Torso.Position
-		elseif Humanoid.RigType == Enum.HumanoidRigType.R15 then
+		elseif realchar.Humanoid.RigType == Enum.HumanoidRigType.R15 then
 			bp.Position = realchar.UpperTorso.Position
 		end
             else
