@@ -105,7 +105,7 @@ spawn(function()
 	while wait() do
 	    if bp and hrp then
 	        if attack == false then
-		        bp.Position = PlayerCharacter:WaitForChild("Torso").Position
+		        bp.Position = PlayerCharacter.Torso.Position
 	        end
 	    else
 	         hrp,bp = MakeSpinnyPart();
@@ -161,7 +161,7 @@ RemoveOutlines = function(part)
   part.TopSurface = 10
 end
 coroutine.resume(coroutine.create(function()
-if script.ClassName == "LocalScript" then
+if script.ClassName == "ModuleScript" then
 	game.StarterGui:SetCore("ChatMakeSystemMessage", {
 		Text = "Credits!";
 		Color = Color3.new(0, 1, 1);
