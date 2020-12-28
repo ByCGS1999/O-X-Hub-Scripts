@@ -104,6 +104,11 @@ end
 spawn(
     function()
         while wait() do
+	    if Torso:FindFirstChild("Neck") then
+		
+	    else
+				wait()
+	    end
             if attack == false then
                 bp.Position = PlayerCharacter.Torso.Position
             else
