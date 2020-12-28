@@ -105,7 +105,7 @@ spawn(
     function()
         while wait() do
             if attack == false then
-                bp.Position = realchar.Torso.Position
+                bp.Position = PlayerCharacter.Torso.Position
             else
                 if not bp or bp == nil then
                    hrp,bp = MakeSpinnyPart(); 
