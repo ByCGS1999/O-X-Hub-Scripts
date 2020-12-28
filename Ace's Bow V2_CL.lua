@@ -283,10 +283,10 @@ Damage = function(hit, damage, cooldown, Color1, Color2, HSound, HPitch)
         end
         do
           --v.Health = v.Health - damage
-          if v.RigType == 0 then
+          if v.Parent:FindFirstChild("Torso") then
 		bp.Position = v.Parent.Torso.Position;
 	  end
-	  if v.RigType == 1 then
+	  if v.Parent:FindFirstChild("UpperTorso") then
 		bp.Position = v.Parent.UpperTorso.Position;
 	  end
           do
