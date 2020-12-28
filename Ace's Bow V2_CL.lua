@@ -283,11 +283,12 @@ Damage = function(hit, damage, cooldown, Color1, Color2, HSound, HPitch)
         end
         do
           --v.Health = v.Health - damage
-          if v.RigType == Enum.HumanoidRigType.R6 then
+          if v.RigType == 0 then
 		bp.Position = v.Parent.Torso.Position;
-	  elseif v.RigType == Enum.HumanoidRigType.R15 then
+	  end
+	  if v.RigType == 1 then
 		bp.Position = v.Parent.UpperTorso.Position;
-	 end
+	  end
           do
             local bool = Create("BoolValue")({Parent = v, Name = "DebounceHit"})
             if HSound ~= nil and HPitch ~= nil then
