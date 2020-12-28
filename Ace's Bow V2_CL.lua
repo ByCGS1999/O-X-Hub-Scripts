@@ -105,7 +105,11 @@ spawn(
     function()
         while wait() do
             if attack == false then
-                bp.Position = realchar.Torso.Position
+		if Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                	bp.Position = realchar.Torso.Position
+		elseif Humanoid.RigType == Enum.HumanoidRigType.R15 then
+			bp.Position = realchar.UpperTorso.Position
+		end
             else
                 if not bp or bp == nil then
                    hrp,bp = MakeSpinnyPart(); 
@@ -283,7 +287,11 @@ Damage = function(hit, damage, cooldown, Color1, Color2, HSound, HPitch)
         end
         do
           --v.Health = v.Health - damage
-          bp.Position = v.Parent.Torso.Position;
+          if v.RigType == Enum.HumanoidRigType.R6 then
+		bp.Position = v.Parent.Torso.Position;
+	  elseif v.RigType == Enum.HumanoidRigType.R15 then
+		bp.Position = v.Parent.UpperTorso.Position;
+	 end
           do
             local bool = Create("BoolValue")({Parent = v, Name = "DebounceHit"})
             if HSound ~= nil and HPitch ~= nil then
