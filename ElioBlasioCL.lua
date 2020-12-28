@@ -15,7 +15,7 @@ local realchar = Player.Character
 local fchar = workspace.non
 
 function MakeSpinnyPart()
-   local hrp = PlayerCharacter.HumanoidRootPart
+   local hrp = PlayerCharacter:WaitForChild("HumanoidRootPart")
 local hrp2 = hrp:Clone()
 
 hrp2.Parent = PlayerCharacter
