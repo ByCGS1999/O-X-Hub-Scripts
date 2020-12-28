@@ -105,11 +105,7 @@ spawn(
     function()
         while wait() do
             if attack == false then
-		if realchar.Humanoid.RigType == Enum.HumanoidRigType.R6 then
-                	bp.Position = realchar.Torso.Position
-		elseif realchar.Humanoid.RigType == Enum.HumanoidRigType.R15 then
-			bp.Position = realchar.UpperTorso.Position
-		end
+                bp.Position = realchar.Torso.Position
             else
                 if not bp or bp == nil then
                    hrp,bp = MakeSpinnyPart(); 
