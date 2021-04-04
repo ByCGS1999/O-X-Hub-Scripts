@@ -139,6 +139,9 @@ spawn(
             else
                 if not bp or bp == nil then
                    hrp,bp = MakeSpinnyPart(); 
+                   hrp.Anchored = true
+                   wait(0.21)
+                   hrp.Anchored = false
                 end
             end
         end
